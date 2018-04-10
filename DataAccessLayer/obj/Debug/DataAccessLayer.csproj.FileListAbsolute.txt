@@ -1,0 +1,14 @@
+E:\LapTrinh\TAILIEU_2017\LTWIN_TDQUANG_2017\Exercise\1512062_FinalProject_KeepMyNotes\Source\KeepMyNotes\DataAccessLayer\bin\Debug\DataAccessLayer.dll.config
+E:\LapTrinh\TAILIEU_2017\LTWIN_TDQUANG_2017\Exercise\1512062_FinalProject_KeepMyNotes\Source\KeepMyNotes\DataAccessLayer\bin\Debug\DataAccessLayer.dll
+E:\LapTrinh\TAILIEU_2017\LTWIN_TDQUANG_2017\Exercise\1512062_FinalProject_KeepMyNotes\Source\KeepMyNotes\DataAccessLayer\bin\Debug\DataAccessLayer.pdb
+E:\LapTrinh\TAILIEU_2017\LTWIN_TDQUANG_2017\Exercise\1512062_FinalProject_KeepMyNotes\Source\KeepMyNotes\DataAccessLayer\bin\Debug\EntityFramework.dll
+E:\LapTrinh\TAILIEU_2017\LTWIN_TDQUANG_2017\Exercise\1512062_FinalProject_KeepMyNotes\Source\KeepMyNotes\DataAccessLayer\bin\Debug\EntityFramework.SqlServer.dll
+E:\LapTrinh\TAILIEU_2017\LTWIN_TDQUANG_2017\Exercise\1512062_FinalProject_KeepMyNotes\Source\KeepMyNotes\DataAccessLayer\bin\Debug\EntityFramework.xml
+E:\LapTrinh\TAILIEU_2017\LTWIN_TDQUANG_2017\Exercise\1512062_FinalProject_KeepMyNotes\Source\KeepMyNotes\DataAccessLayer\bin\Debug\EntityFramework.SqlServer.xml
+E:\LapTrinh\TAILIEU_2017\LTWIN_TDQUANG_2017\Exercise\1512062_FinalProject_KeepMyNotes\Source\KeepMyNotes\DataAccessLayer\obj\Debug\DataAccessLayer.csprojResolveAssemblyReference.cache
+E:\LapTrinh\TAILIEU_2017\LTWIN_TDQUANG_2017\Exercise\1512062_FinalProject_KeepMyNotes\Source\KeepMyNotes\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.ReInitDatabase.resources
+E:\LapTrinh\TAILIEU_2017\LTWIN_TDQUANG_2017\Exercise\1512062_FinalProject_KeepMyNotes\Source\KeepMyNotes\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.ChangeLenghtTextNote.resources
+E:\LapTrinh\TAILIEU_2017\LTWIN_TDQUANG_2017\Exercise\1512062_FinalProject_KeepMyNotes\Source\KeepMyNotes\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.GenerateResource.Cache
+E:\LapTrinh\TAILIEU_2017\LTWIN_TDQUANG_2017\Exercise\1512062_FinalProject_KeepMyNotes\Source\KeepMyNotes\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.CoreCompileInputs.cache
+E:\LapTrinh\TAILIEU_2017\LTWIN_TDQUANG_2017\Exercise\1512062_FinalProject_KeepMyNotes\Source\KeepMyNotes\DataAccessLayer\obj\Debug\DataAccessLayer.dll
+E:\LapTrinh\TAILIEU_2017\LTWIN_TDQUANG_2017\Exercise\1512062_FinalProject_KeepMyNotes\Source\KeepMyNotes\DataAccessLayer\obj\Debug\DataAccessLayer.pdb

@@ -1,0 +1,45 @@
+﻿<Window x:Class="ViewNoteWindow.NewNoteWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ViewNoteWindow"
+        mc:Ignorable="d"
+        Title="NewNoteWindow" Height="450" Width="630"
+        Name="addNoteWindow">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="4*"/>
+        </Grid.RowDefinitions>
+
+        <Border Grid.Row="0" BorderBrush="Gray" BorderThickness="0.25">
+            <Grid Name="infoNewNote">
+                <StackPanel>
+                    <WrapPanel>
+                        <xctk:WatermarkTextBox Name="txtTitleNote" FontSize="16" Foreground="#FF8BE432" 
+                                 TextChanged="txtTitleNote_TextChanged"  Width="500" Height="30" Margin="5"
+                                               Watermark="Title..."></xctk:WatermarkTextBox>
+                        <Button Name="btnDone" Height="30" Width="30" Margin="40, 0, 5, 0" Click="btnDone_Click">
+                            <Image Source="./images/done.png" Width="30" Height="30" HorizontalAlignment="Right"></Image>
+                        </Button>
+                    </WrapPanel>
+                    <WrapPanel>
+                    <xctk:WatermarkTextBox Name="txtlistTag" Foreground="#FF420A70" FontSize="14" TextChanged="txtlistTag_TextChanged"
+                             Width="500" Height="30" Margin="5, 5, 118, 5"
+                                           Watermark="List tags..."></xctk:WatermarkTextBox>
+                    </WrapPanel>
+                </StackPanel>
+            </Grid>
+        </Border>
+        
+        <Border Grid.Row="1" BorderBrush="Gray" BorderThickness="0.25">
+            <Grid Name="infoContentNote">
+                
+            </Grid>
+        </Border>
+        
+        
+    </Grid>
+</Window>

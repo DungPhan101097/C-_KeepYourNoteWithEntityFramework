@@ -1,0 +1,151 @@
+﻿<Window x:Class="ViewNoteWindow.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit" 
+        xmlns:local="clr-namespace:ViewNoteWindow"
+        mc:Ignorable="d"
+        Name="MainViewWindow"
+        Title="Keep My Notes" Height="600" Width="900" Closing="MainViewWindow_Closing" Loaded="MainViewWindow_Loaded"
+        >
+
+    <Window.Resources>
+
+        <ContextMenu x:Key="NotifierContextMenu"
+
+                    Placement="MousePoint">
+
+            <MenuItem Header="View notes" Click="MenuItem_Click"/>
+
+            <MenuItem Header="View Statistics" Click="MenuItem_Click_1"/>
+            <MenuItem Header="Exit" Click="MenuItem_Click_2"/>
+
+
+        </ContextMenu>
+
+    </Window.Resources>
+    <Grid >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Menu Name="menu"
+              Grid.Row="0"
+              Height="30"
+              VerticalAlignment="Stretch">
+            <MenuItem Header="File"
+                      VerticalAlignment="Center">
+                <MenuItem Header="New note" Name="menuNewNote" Click="menuNewNote_Click"/>
+                <MenuItem Header="New tag" Name="menuNewTag" Click="menuNewTag_Click"/>
+                <MenuItem Header="View all Notes" Name="menuViewAllNote" Click="menuViewAllNote_Click"/>
+                <MenuItem Header="View all tags" Name="menuViewAllTag" Click="menuViewAllTag_Click"></MenuItem>
+                <MenuItem Header="View statistics" Name="menuStatistics" Click="menuStatistics_Click"/>
+                <MenuItem Header="Exit" Name="menuExit" Click="menuExit_Click"/>
+            </MenuItem>
+            <MenuItem Header="_Tools..."
+                      VerticalAlignment="Center">
+                <MenuItem Header="View notes...">
+                    <MenuItem Header="Sort by title" Name="sortTitle" Click="sortTitle_Click" ></MenuItem>
+                    <MenuItem Header="Sort by ascending date"></MenuItem>
+                    <MenuItem Header="Sort by descending date"></MenuItem>
+                </MenuItem>
+            </MenuItem>
+        </Menu>
+
+        <Grid 
+            Background="#666666"
+              Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Name="FirstCollumn"  Width="250"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="150"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <!--O 0-->
+            <Grid
+                Margin="10" Background="White"
+                Grid.Column="0" Grid.Row="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="1.5*"/>
+                    <RowDefinition Height="3.5*" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="70" />
+                </Grid.ColumnDefinitions>
+
+                <Border 
+                    Grid.RowSpan="2"
+                    Grid.ColumnSpan="2"
+                    BorderBrush="Black" BorderThickness="1" >
+                    <Border.Effect>
+                        <DropShadowEffect
+                            Direction="320"
+                            BlurRadius="5"
+                            Color="Black"
+                            ShadowDepth="2"
+                            Opacity="0.5"/>
+                    </Border.Effect>
+                </Border>
+
+                <xctk:WatermarkTextBox Name="txtSearchTag" Margin="20,10,-10,0"  
+                                           Grid.Row="0"
+                                           Watermark="Search tag..." TextChanged="txtSearchTag_TextChanged"
+                                           ></xctk:WatermarkTextBox>
+                <Button Name="btnSearchTag"
+                            Grid.Row="0" Grid.Column="1"
+                            Margin="0, 10, 0, 0"
+                            HorizontalAlignment="Center" Click="btnSearchTag_Click">
+                    <Image Source="./images/search.png" ></Image>
+                </Button>
+                <Border Grid.Row="1" Margin="20,10,-10,10"
+                            BorderBrush="Black" BorderThickness="1"
+                            Name="borderResult" Visibility="Collapsed">
+                    <ScrollViewer VerticalScrollBarVisibility="Auto">
+                        <StackPanel Name="resultStack"></StackPanel>
+                    </ScrollViewer>
+                </Border>
+            </Grid>
+
+
+            <!--O 2-->
+            <ScrollViewer
+                    Grid.Column="1" 
+                    Grid.Row="0" Grid.RowSpan="2"
+                    HorizontalScrollBarVisibility="Visible"
+                    VerticalScrollBarVisibility="Auto" 
+                    Margin="0,10,10,10">
+                <Grid Name="content" >
+
+                </Grid>
+            </ScrollViewer>
+
+
+                <!--O 1 0-->
+            <Grid
+                Grid.Column="0" Grid.Row="1"
+                Margin="10,0,10,10"
+                Background="White">
+                <Border BorderBrush="Black" BorderThickness="1" >
+                    <Border.Effect>
+                        <DropShadowEffect
+                            Direction="320"
+                            BlurRadius="5"
+                            Color="Black"
+                            ShadowDepth="2"
+                            Opacity="0.5"/>
+                    </Border.Effect>
+                </Border>
+                <TreeView Name="tvListTag" SelectedItemChanged="tvListTag_SelectedItemChanged"/>
+            </Grid>
+
+
+
+        </Grid>
+
+    </Grid>
+</Window>

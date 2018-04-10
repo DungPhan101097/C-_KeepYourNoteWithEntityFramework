@@ -1,0 +1,15 @@
+﻿<Window x:Class="ViewNoteWindow.ViewStatisticsWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ViewNoteWindow"
+        mc:Ignorable="d"
+        Title="ViewStatisticsWindow" Height="600" Width="600"
+        Name="viewStatistics">
+    <Grid>
+        <TextBlock Margin="213,10,168,528" Foreground="#FF1885D1" FontFamily="Times New Roman" FontSize="18" FontWeight="Bold" TextDecorations="Underline"><Run Text="CHART CLOUD TAGS"/></TextBlock>
+
+        <Image Name="wordCloud" Margin="39,69,33,39"></Image>
+    </Grid>
+</Window>

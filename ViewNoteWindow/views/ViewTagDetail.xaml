@@ -1,0 +1,102 @@
+﻿<UserControl x:Class="ViewNoteWindow.ViewTagDetail"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+              xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
+             xmlns:local="clr-namespace:ViewNoteWindow"
+             mc:Ignorable="d" 
+             Name="MainViewTagDetail"
+            >
+    <Grid Name="tagDetailContainer" Margin="0,0,10,10" >
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1.5*"/>
+            <ColumnDefinition Width="2.5*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="3.8*"/>
+        </Grid.RowDefinitions>
+
+        <Border Grid.Column="0" Grid.Row="0" BorderBrush="Gray" BorderThickness="0.25"
+                Background="White">
+
+            <Grid Name="infoListNote">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="1.5*"/>
+                    <RowDefinition Height="3.5*" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="70" />
+                </Grid.ColumnDefinitions>
+                <xctk:WatermarkTextBox Name="txtsearchNote" 
+                                         Margin="20,10,-10,0"  
+                                        Grid.Row="0"
+                                        Watermark="Search note..." 
+                                       TextChanged="txtsearchNote_TextChanged"></xctk:WatermarkTextBox>
+                <Button Name="btnSearchNote" Grid.Row="0" Grid.Column="1"
+                            Margin="0, 30, -10, -20"
+                            HorizontalAlignment="Center" Click="btnSearchNote_Click">
+                    <Image Source="./images/search.png" ></Image>
+                </Button>
+
+                <Border Name="borderResult" Grid.Row="1" Grid.ColumnSpan="2"
+                            BorderBrush="Black" BorderThickness="1,0,1,1"
+                            Visibility="Collapsed"  >
+                    <ScrollViewer VerticalScrollBarVisibility="Auto">
+                        <StackPanel Name="resultStack"></StackPanel>
+                    </ScrollViewer>
+                </Border>
+
+            </Grid>
+        </Border>
+
+
+        <Border Grid.Column="1" Grid.Row="0" BorderBrush="Gray" BorderThickness="0.25"
+            Background="White">
+            <Grid>
+                <StackPanel Name="noteInfoEditUp">
+                    <TextBox Name="tbxTitleNote" Foreground="#FF0F3EBB" FontSize="18" FontWeight="Bold" FontFamily="Times New Roman"></TextBox>
+                    <WrapPanel Name="infoNote">
+                        <Label FontSize="13" Margin="5">List tag:</Label>
+                        <ComboBox Name="cbxListTag" IsReadOnly="True" Width="100" FontSize="13" Margin="0,3,0,0" SelectedIndex="0" Height="28"></ComboBox>
+                        <TextBlock  Name="tbxAccessNote" FontSize="13" Margin="15,5,0,0"/>
+                    </WrapPanel>
+                    <Button Click="Button_Click" Height="32" Width="32" Margin="200,4,1,0" HorizontalAlignment="Center" >
+                        <Image Source="/images/done.png" Width="32" Height="32" />
+                    </Button>
+                </StackPanel>
+
+            </Grid>
+        </Border>
+
+
+        <Border Grid.Column="0" Grid.Row="1" BorderBrush="Gray" BorderThickness="0.25"
+            Background="White">
+            <ListView Name="lvAllNote" SelectionChanged="lvAllNote_SelectionChanged">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel>
+                            <TextBlock Text="{Binding mAccessTime}" FontStyle="Italic" FontSize="11" />
+                            <TextBlock Text="{Binding mTitle}" FontWeight="Bold" FontSize="14" Foreground="#FF12CD45" FontFamily="Times New Roman" />
+                            <TextBlock Text="{Binding mContent}" Foreground="Blue" FontFamily="Times New Roman" FontSize="13"/>
+                           
+                            <TextBlock  />
+                        </StackPanel>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+          
+        </Border>
+
+
+        <Border
+            Background="White"
+            Grid.Column="1" Grid.Row="1"  BorderBrush="Gray" BorderThickness="0.25">
+            <Grid Name="noteInfoEditDown">
+
+            </Grid>
+        </Border>
+    </Grid>
+</UserControl>
